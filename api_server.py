@@ -389,8 +389,9 @@ if __name__ == '__main__':
     import sys
     
     # Parse command line arguments
-    host = os.getenv('API_HOST', '127.0.0.1')
-    port = int(os.getenv('API_PORT', 5000))
+    host = os.getenv('SERVER_HOST', os.getenv('API_HOST', '127.0.0.1'))
+    # PORT is injected by Databricks Apps; fall back to API_PORT then 5000
+    port = int(os.getenv('PORT', os.getenv('API_PORT', 5000)))
     debug = os.getenv('API_DEBUG', 'False').lower() == 'true'
     
     # Allow CLI override
