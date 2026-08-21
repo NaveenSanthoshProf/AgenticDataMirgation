@@ -42,7 +42,7 @@ def build():
     
     # Validate all resources
     print("\n✓ Validating resources...")
-    base_path = Path(__file__).parent / "sql2snowflakeMapper"
+    base_path = Path(__file__).parent / "knowledge_library"
     valid = 0
     missing = 0
     
@@ -73,7 +73,7 @@ def build():
     
     # Save manifest
     manifest = {
-        "name": "sql2snowflake-mcp",
+        "name": "knowledge-library",
         "version": "1.0.0",
         "build_date": datetime.now().isoformat(),
         "total_resources": len(resources),

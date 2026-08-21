@@ -133,7 +133,7 @@ index = server.get_index()
 ### 📁 Project Structure
 
 ```
-sql2snowflakeMapper/
+knowledge_library/
 ├── Source_Schema/
 │   ├── OS_schema.csv (2.4 MB)
 │   └── OS_schema.md (1.6 MB) ✅ Auto-generated

@@ -4,7 +4,7 @@ SQL to Snowflake MCP Server - BUILD COMPLETE ✅
 
 PROJECT STRUCTURE
 ─────────────────
-sql2snowflakeMapper/
+knowledge_library/
 ├── Source_Schema/
 │   ├── OS_schema.csv (2.4 MB) - SQL Server schema export
 │   └── OS_schema.md (1.6 MB) - Semantic markdown documentation

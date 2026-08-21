@@ -107,7 +107,7 @@ pdfs = server.list_by_format("pdf")
 ## Directory Structure
 
 ```
-sql2snowflakeMapper/
+knowledge_library/
 ├── Source_Schema/                 # Source database schemas
 │   ├── OS_schema.csv             # Original CSV export
 │   └── OS_schema.md              # Converted markdown documentation
@@ -139,8 +139,8 @@ dist/
 python build.py
 
 # Verify file exists
-ls -la sql2snowflakeMapper/Source_Schema/
-ls -la sql2snowflakeMapper/Target_Schema/
+ls -la knowledge_library/Source_Schema/
+ls -la knowledge_library/Target_Schema/
 ```
 
 ### Issue: Configuration outdated

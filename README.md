@@ -59,7 +59,7 @@ A fast, lightweight Python MCP (Model Context Protocol) server for exposing SQL 
 
 ```bash
 # Clone/setup project
-cd sql2snowflakeMapper
+cd knowledge_library
 
 # Install dependencies
 pip install -r requirements.txt
@@ -114,7 +114,7 @@ python mcp_server.py save
 
 ## Resource Structure
 
-### Source Schema (sql2snowflakeMapper/Source_Schema/)
+### Source Schema (knowledge_library/Source_Schema/)
 
 - **OS_schema.csv** - Complete SQL Server database schema export
 - **OS_schema.md** - Semantic markdown documentation (auto-generated)
@@ -124,7 +124,7 @@ python mcp_server.py save
   - Nullable constraints
   - Collation information
 
-### Target Schema (sql2snowflakeMapper/Target_Schema/)
+### Target Schema (knowledge_library/Target_Schema/)
 
 Entity Relationship Diagrams (ERDs) for:
 - Products (v0.5)
@@ -219,7 +219,7 @@ For VS Code, Cline, or other MCP-compatible tools:
 ```json
 {
   "mcpServers": {
-    "sql2snowflake": {
+    "knowledge-library": {
       "command": "python",
       "args": ["mcp_server.py"],
       "env": {
@@ -384,7 +384,7 @@ make clean                      # Clean artifacts
 ## File Structure
 
 ```
-sql2snowflakeMapper/
+knowledge_library/
 ├── Source_Schema/
 │   ├── OS_schema.csv          # Original SQL Server schema export
 │   └── OS_schema.md           # Semantic markdown documentation

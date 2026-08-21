@@ -152,7 +152,7 @@
 FILE STRUCTURE
 ══════════════
 
-sql2snowflakeMapper/
+knowledge_library/
 │
 ├── Core Implementation
 │   ├── mcp_server.py              ← Layer 1: MCP Server

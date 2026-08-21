@@ -8,7 +8,7 @@ from datetime import datetime
 
 # Configuration
 CONFIG_FILE = Path(__file__).parent / "mcp-resources.json"
-RESOURCES_DIR = Path(__file__).parent / "sql2snowflakeMapper"
+RESOURCES_DIR = Path(__file__).parent / "knowledge_library"
 
 
 @dataclass

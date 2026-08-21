@@ -16,10 +16,10 @@ Add to VS Code settings:
 {
   "modelContextProtocol": {
     "servers": {
-      "sql2snowflake": {
+      "knowledge-library": {
         "command": "python",
         "args": ["mcp_server.py"],
-        "cwd": "/path/to/sql2snowflakeMapper",
+        "cwd": "/path/to/knowledge_library",
         "env": {
           "PYTHONUNBUFFERED": "1",
           "MCP_RESOURCES_PATH": "./dist"
@@ -38,12 +38,12 @@ Create `.claude/resources.json`:
 {
   "resources": [
     {
-      "name": "sql2snowflake-resources",
+      "name": "knowledge-library-resources",
       "type": "mcp",
       "command": "python",
       "args": ["mcp_server.py"],
       "config": {
-        "cwd": "/path/to/sql2snowflakeMapper"
+        "cwd": "/path/to/knowledge_library"
       }
     }
   ]
@@ -58,10 +58,10 @@ In Cline settings:
 {
   "mcpServers": [
     {
-      "name": "sql2snowflake",
+      "name": "knowledge-library",
       "command": "python",
       "args": ["mcp_server.py", "list"],
-      "cwd": "/path/to/sql2snowflakeMapper",
+      "cwd": "/path/to/knowledge_library",
       "enabled": true
     }
   ]
@@ -77,7 +77,7 @@ from pathlib import Path
 import sys
 
 # Add project to path
-sys.path.insert(0, "/path/to/sql2snowflakeMapper")
+sys.path.insert(0, "/path/to/knowledge_library")
 
 from mcp_server import MCPResourceServer
 
@@ -104,9 +104,9 @@ with open("products.pdf", "wb") as f:
 Resources are exposed as MCP resources following the standard protocol:
 
 ```
-mcp://sql2snowflake/resource/os_schema
-mcp://sql2snowflake/resource/products_erd_v0_5
-mcp://sql2snowflake/resource/contracts_erd_v0_7
+mcp://knowledge-library/resource/os_schema
+mcp://knowledge-library/resource/products_erd_v0_5
+mcp://knowledge-library/resource/contracts_erd_v0_7
 ...
 ```
 
@@ -243,8 +243,8 @@ python mcp_server.py get invalid_resource
 python build.py
 
 # Verify resources exist
-ls -la sql2snowflakeMapper/Source_Schema/
-ls -la sql2snowflakeMapper/Target_Schema/
+ls -la knowledge_library/Source_Schema/
+ls -la knowledge_library/Target_Schema/
 
 # Check configuration
 cat mcp-resources.json
