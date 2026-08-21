@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sql2snowflake-mcp"
+version = "1.0.0"
+description = "Fast MCP server for SQL to Snowflake schema migration resources"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Your Name"}]
+keywords = ["mcp", "schema", "snowflake", "resources"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/yourusername/sql2snowflake-mcp"
+Documentation = "https://github.com/yourusername/sql2snowflake-mcp#readme"
+Repository = "https://github.com/yourusername/sql2snowflake-mcp"
+Issues = "https://github.com/yourusername/sql2snowflake-mcp/issues"
+
+[project.scripts]
+mcp-server = "mcp_server:main"
+mcp-build = "build:build"
+
+[tool.setuptools]
+packages = ["sql2snowflake_mcp"]
+
+[tool.setuptools.package-data]
+sql2snowflake_mcp = ["*.json"]
