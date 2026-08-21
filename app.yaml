@@ -1,0 +1,7 @@
+command: ["python", "api_server.py"]
+
+env:
+  - name: PORT
+    value: "8080"
+  - name: SERVER_HOST
+    value: "0.0.0.0"

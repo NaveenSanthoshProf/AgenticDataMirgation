@@ -1,0 +1,23 @@
+bundle:
+  name: knowledge-library
+
+variables:
+  catalog:
+    default: main
+  schema:
+    default: knowledge_library
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-b6bdfea6-439f.cloud.databricks.com
+      profile: blackbirdbeast
+
+resources:
+  apps:
+    knowledge_library_app:
+      name: "knowledge-library"
+      description: "Knowledge Library MCP Server — serves source/target schemas and ERDs"
+      source_code_path: .

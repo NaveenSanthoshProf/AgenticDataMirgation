@@ -3,7 +3,7 @@
 # Replace APP_URL with your deployed Databricks App URL.
 # Replace CATALOG and SCHEMA with your target Unity Catalog namespace.
 
-APP_URL   = "https://<your-databricks-app-url>"   # e.g. https://my-app.azuredatabricks.net
+APP_URL   = "https://knowledge-library-7474658107206073.aws.databricksapps.com"
 CATALOG   = "main"
 SCHEMA    = "knowledge_library"
 
